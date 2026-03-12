@@ -1,13 +1,15 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Movies.Api.Controllers;
 
 [ApiController]
+[ApiVersion(1.0)]
 public class IdentityController : ControllerBase
 {
     private const string TokenSecret = "ForTheLoveOfGodStoreAndLoadThisSecurely";
